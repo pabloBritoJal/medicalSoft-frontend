@@ -17,11 +17,9 @@ import {
   SIGNUP_LINK_TEXT,
 } from "../../../constants/constants";
 import { SignUpData } from "../../../types/forms";
-import { useAuthSignUp } from "../../../hooks/useAuth";
 import CustomInputForm from "./CustomInputForm";
-import { handleError } from "../utils/handleError";
 import { useDispatch, useSelector } from "react-redux";
-import { startCreatingUserWithEmailPass } from "../../../store/auth/thunks";
+import { startCreatingUserWithEmailPass, startGoogleSignIn } from "../../../store/auth/thunks";
 import { AppDispatch, RootState } from "../../../store/store";
 import ErrorMessage from "../../../components/ErrorMessage";
 
@@ -62,6 +60,11 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ toggle }) => {
     } catch (error) {
       console.error("Error during sign-up:", error);
     }
+  };
+
+  const onGoogleSignIn = () => {
+    console.log("OnGoogleSigIn");
+    dispatch(startGoogleSignIn());
   };
 
   return (
@@ -119,6 +122,9 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ toggle }) => {
       </div>
 
       <button
+       onClick={() => {
+        onGoogleSignIn();
+      }}
         type="button"
         className="mt-4 w-full flex items-center justify-center gap-3.5 py-3 border rounded-lg text-gray-700 hover:bg-gray-100"
         aria-label="Continue with Google"

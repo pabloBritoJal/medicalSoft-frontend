@@ -25,6 +25,7 @@ const AuthPage: React.FC = () => {
           />
         )
       }
+      isSignIn={isSignIn}
     />
   );
 };

@@ -21,6 +21,8 @@ const googleProvider = new GoogleAuthProvider();
 export const singInWithGoogle = async () => {
   try {
     const userCredential = await signInWithPopup(FirebaseAuth, googleProvider);
+    console.log('no se que hacer')
+    console.log(userCredential.operationType);
     //const credentials = GoogleAuthProvider.credentialFromResult(result);
     const { displayName, email, photoURL, uid } = userCredential.user;
 
