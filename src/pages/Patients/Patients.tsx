@@ -68,6 +68,41 @@ const mockConsultations = [
     doctorNotes:
       "Posible gastritis. Se indican medicamentos y dieta controlada.",
   },
+  {
+    id: "3",
+    date: "2024-10-22",
+    reason: "Dolor abdominal",
+    doctorNotes:
+      "Posible gastritis. Se indican medicamentos y dieta controlada.",
+  },
+  {
+    id: "3",
+    date: "2024-10-22",
+    reason: "Dolor abdominal",
+    doctorNotes:
+      "Posible gastritis. Se indican medicamentos y dieta controlada.",
+  },
+  {
+    id: "3",
+    date: "2024-10-22",
+    reason: "Dolor abdominal",
+    doctorNotes:
+      "Posible gastritis. Se indican medicamentos y dieta controlada.",
+  },
+  {
+    id: "3",
+    date: "2024-10-22",
+    reason: "Dolor abdominal",
+    doctorNotes:
+      "Posible gastritis. Se indican medicamentos y dieta controlada.",
+  },
+  {
+    id: "3",
+    date: "2024-10-22",
+    reason: "Dolor abdominal",
+    doctorNotes:
+      "Posible gastritis. Se indican medicamentos y dieta controlada.",
+  },
 ];
 
 interface IComponentsToShow {
